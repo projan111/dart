@@ -42,36 +42,64 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
         color: Colors.blue.shade50,
-        child: Center(
-
-          child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-              color: Colors.lightGreen,
-              border: Border.all(
-                width: 2,
-                color: Colors.white,
-              ),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 20,
-                    spreadRadius: 2,
-                    color: Colors.blue,
-                  )
+        height: double.infinity,
+        padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+          child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image.asset("assets/images/shivratrilogolab.jpg"),
+                  Container(
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
+                    color: Colors.white,
+                    width: double.infinity,
+                    child: const Column(
+                      children: [
+                        Text("Maha Shivaratri", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,),),
+                        Text("Nepali's one of the great festival")
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(onPressed: (){}, child: const Text("Explore",)),
+                        ElevatedButton(onPressed: (){}, child: const Text("View Post",))
+                      ],
+                    ),
+                  ),
+                  Image.asset("assets/images/shivratrilogolab.jpg"),
+                  Container(
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
+                    color: Colors.white,
+                    width: double.infinity,
+                    child: const Column(
+                      children: [
+                        Text("Maha Shivaratri", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,),),
+                        Text("Nepali's one of the great festival")
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(onPressed: (){}, child: const Text("Explore",)),
+                        ElevatedButton(onPressed: (){}, child: const Text("View Post",))
+                      ],
+                    ),
+                  ),
                 ],
-              shape: BoxShape.circle,
-            ),
-            // child:Container(
 
-            //     child: Image.asset("assets/images/shivratrilogolab.jpg"),
-            //
-            // ),
+              )
           ),
-        ),
+
+
       )
     );
   }
