@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: ListView.separated(itemBuilder: (context, index){
           return ListTile(
-            leading: Text('${index+1}', style: const TextStyle(fontSize: 16),),
+            leading: Text('$index', style: const TextStyle(fontSize: 16),),
             title: Text(arrName[index]),
             subtitle: const Text('Number'),
             trailing: const Icon(Icons.add),
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
           itemCount: arrName.length,
           separatorBuilder: (context, index){
-            return const Divider(height: 20, thickness: 0.8,);
+            return const Divider(height: 100, thickness: 1,);
           },
         )
 
