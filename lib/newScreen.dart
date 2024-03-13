@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter'),
@@ -41,12 +41,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Welcome Home!", style: TextStyle(color: Colors.white),),
+          title: const Text("User List", style: TextStyle(color: Colors.white),),
           backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         body: ListView.separated(itemBuilder: (context, index){
           return ListTile(
-            leading: Text('$index', style: const TextStyle(fontSize: 16),),
+            leading: const CircleAvatar(
+              backgroundImage: AssetImage("assets/images/user.png"),
+              backgroundColor: Colors.blue,
+              child: Text("text"), // we can place texts inside the avatar as well
+            ),
             title: Text(arrName[index]),
             subtitle: const Text('Number'),
             trailing: const Icon(Icons.add),
@@ -54,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
           itemCount: arrName.length,
           separatorBuilder: (context, index){
-            return const Divider(height: 100, thickness: 1,);
+            return const Divider(height: 20, thickness: 0.8,);
           },
         )
 
