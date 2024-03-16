@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_projects/card_section.dart';
+import 'package:practice_projects/input_page.dart';
 import 'package:practice_projects/main.dart';
 import 'package:practice_projects/new_page.dart';
 
@@ -54,10 +55,18 @@ class User extends StatelessWidget{
               OutlinedButton(onPressed: (){
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CardSection())
+                  MaterialPageRoute(builder: (context) =>  const CardSection())
                 );
               }, child: const Text(
                 "Card Section"
+              )),
+              OutlinedButton(onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyInputField())
+                );
+              }, child: const Text(
+                  "Login"
               ))
             ],
           )
