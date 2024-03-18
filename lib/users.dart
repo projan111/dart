@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practice_projects/card_section.dart';
 import 'package:practice_projects/input_page.dart';
 import 'package:practice_projects/main.dart';
+import 'package:practice_projects/my_grid_view.dart';
 import 'package:practice_projects/new_page.dart';
 
 class User extends StatelessWidget{
@@ -67,7 +68,14 @@ class User extends StatelessWidget{
                 );
               }, child: const Text(
                   "Login"
-              ))
+              )),
+              TextButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyGridView())
+                );
+                
+              }, child: const Text('Grid View')),
             ],
           )
         ],
