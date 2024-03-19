@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           displayLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w500, fontFamily: "MainFont")
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
       home: const User(),
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: const Text("User List", style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          backgroundColor: Colors.orange,
         ),
         body: ListView.separated(itemBuilder: (context, index){
           return ListTile(

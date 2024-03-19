@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_projects/call_back_func.dart';
 import 'package:practice_projects/card_section.dart';
 import 'package:practice_projects/input_page.dart';
 import 'package:practice_projects/main.dart';
@@ -66,7 +67,7 @@ class User extends StatelessWidget{
                     context,
                     MaterialPageRoute(builder: (context) => const MyInputField())
                 );
-              }, child: const Text(
+                }, child: const Text(
                   "Login"
               )),
               TextButton(onPressed: (){
@@ -75,7 +76,17 @@ class User extends StatelessWidget{
                   MaterialPageRoute(builder: (context) => const MyGridView())
                 );
                 
-              }, child: const Text('Grid View')),
+                }, child: const Text('Grid View')),
+
+              // Go to call back function
+              OutlinedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>
+                    const CallBackFunc()
+                  )
+                );
+                }, child: const Text('Go to call back')),
             ],
           )
         ],
