@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_projects/stack_widget.dart';
 
 class CircleWidget extends StatelessWidget {
   const CircleWidget({super.key});
@@ -10,11 +11,17 @@ class CircleWidget extends StatelessWidget {
         title: const Text("Circle Slider", style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.orange,
       ),
-      body: const SizedBox(
+      body: SizedBox(
         child: Column(
           children: [
-             CatItems(),
-             CatSlider(),
+             const CatItems(),
+             ElevatedButton(onPressed: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyStackWidget())
+                )
+              }, child: const Text("Stack Widget")),
+             const CatSlider(),
           ],
         ),
       ),

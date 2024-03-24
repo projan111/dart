@@ -5,6 +5,8 @@ import 'package:practice_projects/input_page.dart';
 import 'package:practice_projects/main.dart';
 import 'package:practice_projects/my_grid_view.dart';
 import 'package:practice_projects/new_page.dart';
+import 'package:practice_projects/ui_helper/utils.dart';
+import 'package:practice_projects/widgets/rounded_button.dart';
 
 class User extends StatelessWidget{
   const User({super.key});
@@ -87,6 +89,36 @@ class User extends StatelessWidget{
                   )
                 );
                 }, child: const Text('Go to call back')),
+              
+              // Custom widget button
+              Column(
+                children: [
+                  SizedBox(
+                    width: 200,
+                    height: 45,
+                    child: RoundedButton(btnName: "Play",
+                      icon: const Icon(Icons.play_arrow, color: Colors.white,),
+                      callBack: (){
+                      print("Custom Button");
+                    },
+                      textStyle: const TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  const SizedBox(height: 8,),
+                  SizedBox(
+                    width: 200,
+                    height: 45,
+                    child: RoundedButton(btnName: "Pause",
+                      icon: const Icon(Icons.pause, color: Colors.white,),
+                      bgColor: Colors.orange,
+                      callBack: (){
+                        print("Custom Button");
+                      },
+                      textStyle: const TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ],
+              )
             ],
           )
         ],
